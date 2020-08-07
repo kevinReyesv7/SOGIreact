@@ -11,9 +11,16 @@ class ListarEquipamiento extends Component {
 
   constructor(props) {
     super(props);
+    this.handleEquipamientoDelete = this.handleEquipamientoDelete.bind(this);
     this.state = {
         equipamientos: [],
       }
+  }
+
+  handleEquipamientoDelete(id) {
+    equipamientosService.remove(id)
+      .then((response) => console.log(response))
+      .catch((error) => console.log(error));
   }
 
   componentDidMount() {
@@ -57,7 +64,7 @@ class ListarEquipamiento extends Component {
 									<td>{equipamiento.description}</td>
 									<td>{equipamiento.lastMaintenance}</td>
                   <td><Link to={`/actualizar-equipamiento/${equipamiento.id}`}> actualizar </Link></td>
-                  <td><button onClick={equipamientosService.remove(equipamiento.id)}> Eliminar </button></td>
+                  <td><button onClick={this.handleEquipamientoDelete(equipamiento.id)}> Eliminar </button></td>
 								</tr>
 							</tbody>
             )
