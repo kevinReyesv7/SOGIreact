@@ -11,7 +11,7 @@
   },
   "proxy": {
     "/api": {
-      "target": "https://equipment-service.herokuapp.com/equipamiento/*",
+      "target": "https://equipment-service.herokuapp.com",
       "ws": true
     }
   },
