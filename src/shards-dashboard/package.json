@@ -9,6 +9,12 @@
   "scripts": {
     "start": "gulp"
   },
+  "proxy": {
+    "/api": {
+      "target": "https://equipment-service.herokuapp.com/equipamiento/*",
+      "ws": true
+    }
+  },
   "dependencies": {
     "browser-sync": "^2.24.5",
     "gulp": "^3.9.1",
