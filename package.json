@@ -29,6 +29,12 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
+  "proxy": {
+    "/api": {
+      "target": "https://equipment-service.herokuapp.com/equipamiento/*",
+      "ws": true
+    }
+  },
   "eslintConfig": {
     "extends": "react-app"
   },
