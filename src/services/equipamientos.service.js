@@ -33,7 +33,7 @@ const equipamientosService = {
     show,
     create,
     update,
-    remove,
+    //remove,
     removeTotal,
 };
 
