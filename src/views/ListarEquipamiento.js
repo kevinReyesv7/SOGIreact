@@ -9,19 +9,19 @@ import equipamientosService from '../services/equipamientos.service';
 
 class ListarEquipamiento extends Component {
 
-  //constructor(props) {
-  //  super(props);
-  //  this.handleEquipamientoDelete = this.handleEquipamientoDelete.bind(this);
-  //  this.state = {
-  //      equipamientos: [],
-  //    }
-  //}
+  constructor(props) {
+    super(props);
+    this.handleEquipamientoDelete = this.handleEquipamientoDelete.bind(this);
+    this.state = {
+        equipamientos: [],
+      }
+  }
 
-  //handleEquipamientoDelete(id) {
-  //  equipamientosService.remove(id)
-  //    .then((response) => console.log(response))
-  //    .catch((error) => console.log(error));
-  //}
+  handleEquipamientoDelete(id) {
+    equipamientosService.remove(id)
+      .then((response) => console.log(response))
+      .catch((error) => console.log(error));
+  }
 
   componentDidMount() {
     equipamientosService.getAll().then((response) => {
@@ -63,7 +63,8 @@ class ListarEquipamiento extends Component {
 									<td>{equipamiento.name}</td>
 									<td>{equipamiento.description}</td>
 									<td>{equipamiento.lastMaintenance}</td>
-                  <td><Link to={`/actualizar-equipamiento/${equipamiento.id}`}> actualizar </Link></td>
+                  <td><Link to={`/actualizar-equipamiento/${equipamiento.id}`}> Actualizar </Link></td>
+                  <td><button onClick={this.handleEquipamientoDelete(equipamiento.id)}>Eliminar</button></td>
 								</tr>
 							</tbody>
             )
