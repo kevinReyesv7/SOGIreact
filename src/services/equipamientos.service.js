@@ -19,9 +19,9 @@ function update(equipamientoId) {
     return api.patch(`${basePath}${equipamientoId}`);
 }
 
-//function remove(equipamientoId) {
-//    return api.patch(`${basePath}?id=${equipamientoId}`);
-//}
+function remove(equipamientoId) {
+    return api.patch(`${basePath}?id=${equipamientoId}`);
+}
 
 function removeTotal(equipamientoId) {
     return api.delete(`${basePath}?id=${equipamientoId}`);
@@ -33,7 +33,7 @@ const equipamientosService = {
     show,
     create,
     update,
-    //remove,
+    remove,
     removeTotal,
 };
 
