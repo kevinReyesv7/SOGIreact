@@ -10,7 +10,7 @@ import {
   FormInput,
   Button,
 } from "shards-react";
-import equipamientosService from '../../services/equipamientos.service';
+// import equipamientosService from '../../services/equipamientos.service'; se hace import pero no se usa 
 
 
 const Equipamiento= ({
