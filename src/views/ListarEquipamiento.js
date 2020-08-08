@@ -9,13 +9,13 @@ import equipamientosService from '../services/equipamientos.service';
 
 class ListarEquipamiento extends Component {
 
-  constructor(props) {
-    super(props);
-    this.handleEquipamientoDelete = this.handleEquipamientoDelete.bind(this);
-    this.state = {
-        equipamientos: [],
-      }
-  }
+  //constructor(props) {
+  //  super(props);
+  //  this.handleEquipamientoDelete = this.handleEquipamientoDelete.bind(this);
+  //  this.state = {
+  //      equipamientos: [],
+  //    }
+  //}
 
   //handleEquipamientoDelete(id) {
   //  equipamientosService.remove(id)
