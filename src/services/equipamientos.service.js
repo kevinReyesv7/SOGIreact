@@ -15,13 +15,13 @@ function create(data) {
     return api.post(`${basePath}`, data);
 }
 
-function update(data) {
-    return api.patch(`${basePath}32`);
+function update(equipamientoId) {
+    return api.patch(`${basePath}${equipamientoId}`);
 }
 
-function remove(equipamientoId) {
-    return api.patch(`${basePath}?id=${equipamientoId}`);
-}
+//function remove(equipamientoId) {
+//    return api.patch(`${basePath}?id=${equipamientoId}`);
+//}
 
 function removeTotal(equipamientoId) {
     return api.delete(`${basePath}?id=${equipamientoId}`);
