@@ -16,7 +16,7 @@ function create(data) {
 }
 
 function update(data) {
-    return api.put(`${basePath}`, data);
+    return api.patch(`${basePath}`, data);
 }
 
 function remove(equipamientoId) {
