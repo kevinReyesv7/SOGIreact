@@ -16,7 +16,7 @@ function create(data) {
 }
 
 function update(data) {
-    return api.patch(`${basePath}/32`);
+    return api.patch(`${basePath}32`);
 }
 
 function remove(equipamientoId) {
