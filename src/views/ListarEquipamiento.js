@@ -17,11 +17,11 @@ class ListarEquipamiento extends Component {
       }
   }
 
-  handleEquipamientoDelete(id) {
-    equipamientosService.remove(id)
-      .then((response) => console.log(response))
-      .catch((error) => console.log(error));
-  }
+  //handleEquipamientoDelete(id) {
+  //  equipamientosService.remove(id)
+  //    .then((response) => console.log(response))
+  //    .catch((error) => console.log(error));
+  //}
 
   componentDidMount() {
     equipamientosService.getAll().then((response) => {
@@ -64,7 +64,6 @@ class ListarEquipamiento extends Component {
 									<td>{equipamiento.description}</td>
 									<td>{equipamiento.lastMaintenance}</td>
                   <td><Link to={`/actualizar-equipamiento/${equipamiento.id}`}> actualizar </Link></td>
-                  <td><button onClick={this.handleEquipamientoDelete(equipamiento.id)}> Eliminar </button></td>
 								</tr>
 							</tbody>
             )
