@@ -16,9 +16,10 @@ class ListarEquipamiento extends Component {
         equipamientos: [],
         id: this.props.match.params.id,
       }
+  this.handleEquipamientoDelete = this.handleEquipamientoDelete.bind(this);
   }
 
-  this.handleEquipamientoDelete = this.handleEquipamientoDelete.bind(this);
+  
   handleEquipamientoDelete(data) {
     equipamientosService.remove(this.state.id)
       .then((response) => console.log(response))
