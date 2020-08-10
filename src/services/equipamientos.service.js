@@ -20,7 +20,7 @@ function update(equipamientoId, data) {
 }
 
 function remove(equipamientoId) {
-    return api.delete(`${basePath}?id=${equipamientoId}`);
+    return api.delete(`${basePath}/${equipamientoId}`);
 }
 
 //function removeTotal(equipamientoId) {
