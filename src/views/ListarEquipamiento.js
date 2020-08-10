@@ -67,7 +67,7 @@ class ListarEquipamiento extends Component {
                   <td><Button
                       theme="primary"
                       className="mb-2 mr-1"
-                      onClick={this.handleEquipamientoDelete}>Eliminar</button>
+                      onClick={this.handleEquipamientoDelete}>Eliminar</Button>
                   </td>
 								</tr>
 							</tbody>
