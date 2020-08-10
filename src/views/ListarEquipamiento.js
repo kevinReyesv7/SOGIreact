@@ -1,7 +1,9 @@
 import React, { Component } from "react";
+import PropTypes from "prop-types";
 import {
   Container,
   Row,
+  Button
 } from "shards-react";
 import { Link } from 'react-router-dom';
 import PageTitle from "../components/common/PageTitle";
