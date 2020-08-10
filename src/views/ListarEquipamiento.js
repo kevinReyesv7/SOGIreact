@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import PropTypes from "prop-types";
 import {
   Container,
   Row,
@@ -13,14 +12,14 @@ class ListarEquipamiento extends Component {
 
   constructor(props) {
     super(props);
-    this.handleEquipamientoDelete = this.handleEquipamientoDelete.bind(this);
     this.state = {
         equipamientos: [],
         id: this.props.match.params.id,
       }
   }
 
-  handleEquipamientoDelete() {
+  this.handleEquipamientoDelete = this.handleEquipamientoDelete.bind(this);
+  handleEquipamientoDelete(data) {
     equipamientosService.remove(this.state.id)
       .then((response) => console.log(response))
       .catch((error) => console.log(error));
