@@ -19,12 +19,12 @@ class UpdateEquipamiento extends Component {
     }
 
     this.handleEquipamientoSubmit = this.handleEquipamientoSubmit.bind(this);
-    equipamientosService.show(this.state.id).then((response) => {
-      this.setState({
-        name: response.data.name,
-        description: response.data.description,
-      })
-    });
+    //equipamientosService.show(this.state.id).then((response) => {
+    //  this.setState({
+    //    name: response.data.name,
+    //    description: response.data.description,
+    //  })
+    //});
   }
 
   handleEquipamientoSubmit(data) {
