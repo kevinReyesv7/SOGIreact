@@ -17,7 +17,7 @@ class ListarEquipamiento extends Component {
       }
   }
 
-  handleEquipamientoDelete(data) {
+  handleEquipamientoDelete() {
     equipamientosService.remove(this.state.id)
       .then((response) => console.log(response))
       .catch((error) => console.log(error));
@@ -50,7 +50,7 @@ class ListarEquipamiento extends Component {
                 <th>Id</th>
                 <th>Equipamiento</th>
                 <th>Descripción</th>
-                <th>Última mantención</th>
+                <th>Fecha creación</th>
                 <th>Actualizar</th>
                 <th>Eliminar</th>
               </tr>
@@ -62,9 +62,13 @@ class ListarEquipamiento extends Component {
 									<td>{equipamiento.id}</td>
 									<td>{equipamiento.name}</td>
 									<td>{equipamiento.description}</td>
-									<td>{equipamiento.lastMaintenance}</td>
+									<td>{equipamiento.createAt}</td>
                   <td><Link to={`/actualizar-equipamiento/${equipamiento.id}`}> Actualizar </Link></td>
-                  <td><button onClick={this.handleEquipamientoDelete(equipamiento.id)}>Eliminar</button></td>
+                  <td><Button
+                      theme="primary"
+                      className="mb-2 mr-1"
+                      onClick={this.handleEquipamientoDelete}>Eliminar</button>
+                  </td>
 								</tr>
 							</tbody>
             )
