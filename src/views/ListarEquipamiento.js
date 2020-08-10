@@ -20,8 +20,8 @@ class ListarEquipamiento extends Component {
   }
 
   
-  handleEquipamientoDelete(data) {
-    equipamientosService.remove(this.state.id)
+  handleEquipamientoDelete(id) {
+    equipamientosService.remove(id)
       .then((response) => console.log(response))
       .catch((error) => console.log(error));
   }
@@ -70,7 +70,7 @@ class ListarEquipamiento extends Component {
                   <td><Button
                       theme="primary"
                       className="mb-2 mr-1"
-                      onClick={this.handleEquipamientoDelete}>Eliminar</Button>
+                      onClick={this.handleEquipamientoDelete(equipamiento.id)}>Eliminar</Button>
                   </td>
 								</tr>
 							</tbody>
