@@ -14,9 +14,9 @@ class ListarEquipamiento extends Component {
     super(props);
     this.state = {
         equipamientos: [],
-        id: this.props.match.params.id,
+        //id: this.props.match.params.id,
       }
-  this.handleEquipamientoDelete = this.handleEquipamientoDelete.bind(this);
+  //this.handleEquipamientoDelete = this.handleEquipamientoDelete.bind(this);
   }
 
   
@@ -70,7 +70,7 @@ class ListarEquipamiento extends Component {
                   <td><Button
                       theme="primary"
                       className="mb-2 mr-1"
-                      onClick={this.handleEquipamientoDelete(equipamiento.id)}>Eliminar</Button>
+                      onClick={(event) => this.handleEquipamientoDelete(equipamiento.id)}>Eliminar</Button>
                   </td>
 								</tr>
 							</tbody>
