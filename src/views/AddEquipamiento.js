@@ -18,7 +18,7 @@ class AddNewEquipamiento extends Component {
 
   handleEquipamientoSubmit(data) {
     equipamientosService.create(data)
-      .then((response) => console.log(response))
+      .then((response) => {console.log(response); window.location.reload()})
       .catch((error) => console.log(error));
   }
 

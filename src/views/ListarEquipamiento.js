@@ -22,8 +22,9 @@ class ListarEquipamiento extends Component {
   
   handleEquipamientoDelete(id) {
     equipamientosService.remove(id)
-      .then((response) => console.log(response))
+      .then((response) => {console.log(response); window.location.reload()})
       .catch((error) => console.log(error));
+    //window.location.reload(true);
   }
 
   componentDidMount() {

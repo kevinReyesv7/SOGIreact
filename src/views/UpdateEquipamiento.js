@@ -31,7 +31,7 @@ class UpdateEquipamiento extends Component {
 
   handleEquipamientoSubmit(data) {
     equipamientosService.update(this.state.id, data)
-      .then((response) => console.log(response))
+      .then((response) => {console.log(response); window.location.reload()})
       .catch((error) => console.log(error));
   }
   
