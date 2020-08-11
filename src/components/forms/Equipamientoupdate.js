@@ -14,11 +14,12 @@ import {
 
 
 const Equipamiento= ({
-  onSubmit, names, descriptions, lastMaintenances
+  onSubmit, names, descriptions, lastMaintenances, ubications
   }) => {
     const [name, setName] = useState(names);
     const [description, setDescription] = useState(descriptions);
     const [lastMaintenance, setLastMaintenance] = useState(lastMaintenances);
+    const [ubication, setUbication] = useState(ubications);
 
     return(
       <Row>
@@ -54,6 +55,15 @@ const Equipamiento= ({
                     className="mb-3"
                     placeholder="dd-MM-yyyy" />
                 </FormGroup>
+                <FormGroup>
+                  <label>Ubicación del Equipamiento</label>
+                  <FormInput
+                    value={lastMaintenance}
+                    onChange={(event) => setLastMaintenance(event.target.value)}                    
+                    size="lg"
+                    className="mb-3"
+                    placeholder="Pabellón/Quimioterapia/Recuperación" />
+                </FormGroup>
               </Form>
               <Button 
                 theme="primary"
@@ -75,6 +85,7 @@ Equipamiento.propTypes = {
   names: PropTypes.string,
   description: PropTypes.string,
   lastMaintenance: PropTypes.string,
+  ubication: PropTypes.string,
 }
 
 Equipamiento.defaultProps = {
