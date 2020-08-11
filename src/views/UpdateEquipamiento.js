@@ -5,7 +5,7 @@ import {
 } from "shards-react";
 
 import PageTitle from "../components/common/PageTitle";
-import Equipamiento from "../components/forms/ActualizarEquipamiento";
+import Equipamientoupdate from "../components/forms/Equipamientoupdate";
 import equipamientosService from '../services/equipamientos.service';
 
 class UpdateEquipamiento extends Component {
@@ -42,9 +42,9 @@ class UpdateEquipamiento extends Component {
         <Row noGutters className="page-header py-4">
           <PageTitle sm="4" title="Actualizar Equipamiento" subtitle="AlphaOmega" className="text-sm-left" />
         </Row>
-        <Equipamiento
+        <Equipamientoupdate
           onSubmit={this.handleEquipamientoSubmit} names={this.state.name} descriptions={this.state.description} lastMaintenances={this.state.lastMaintenance}
-        ></Equipamiento>
+        ></Equipamientoupdate>
       </Container>
     );
   }
