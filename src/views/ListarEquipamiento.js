@@ -50,9 +50,9 @@ class ListarEquipamiento extends Component {
 					<table className="table">
             <thead>
               <tr>
-                <th>Id</th>
                 <th>Equipamiento</th>
                 <th>Descripción</th>
+                <th>Ubicación</th>
                 <th>Última mantención</th>
                 <th>Fecha creación</th>
                 <th>Actualizar</th>
@@ -63,9 +63,9 @@ class ListarEquipamiento extends Component {
             return (
 							<tbody>
 								<tr>
-									<td>{equipamiento.id}</td>
 									<td>{equipamiento.name}</td>
 									<td>{equipamiento.description}</td>
+                  <td>{equipamiento.ubication}</td>
                   <td>{equipamiento.lastMaintenance}</td>
 									<td>{equipamiento.createAt}</td>
                   <td><Link to={`/actualizar-equipamiento/${equipamiento.id}`}> Actualizar </Link></td>
