@@ -74,7 +74,7 @@ Equipamiento.propTypes = {
   onSubmit: PropTypes.func,
   names: PropTypes.string,
   description: PropTypes.string,
-  lastMaintenance: ProTypes.string,
+  lastMaintenance: PropTypes.string,
 }
 
 Equipamiento.defaultProps = {
