@@ -58,8 +58,8 @@ const Equipamiento= ({
                 <FormGroup>
                   <label>Ubicación del Equipamiento</label>
                   <FormInput
-                    value={lastMaintenance}
-                    onChange={(event) => setLastMaintenance(event.target.value)}                    
+                    value={ubication}
+                    onChange={(event) => setUbication(event.target.value)}                    
                     size="lg"
                     className="mb-3"
                     placeholder="Pabellón/Quimioterapia/Recuperación" />
@@ -68,7 +68,7 @@ const Equipamiento= ({
               <Button 
                 theme="primary"
                 className="mb-2 mr-1"
-                onClick={(event) => onSubmit({ 'name': name, 'description': description, 'lastMaintenance': lastMaintenance })}
+                onClick={(event) => onSubmit({ 'name': name, 'description': description, 'lastMaintenance': lastMaintenance, 'ubication': ubication })}
                 // onClick={onSubmit}
                 >
                   Actualizar
