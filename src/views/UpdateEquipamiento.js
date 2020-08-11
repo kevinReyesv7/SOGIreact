@@ -16,6 +16,7 @@ class UpdateEquipamiento extends Component {
         name: "",
         description: "",
         lastMaintenance: "",
+        ubication: "",
         id: this.props.match.params.id,
     }
 
@@ -43,7 +44,7 @@ class UpdateEquipamiento extends Component {
           <PageTitle sm="4" title="Actualizar Equipamiento" subtitle="AlphaOmega" className="text-sm-left" />
         </Row>
         <Equipamientoupdate
-          onSubmit={this.handleEquipamientoSubmit} names={this.state.name} descriptions={this.state.description} lastMaintenances={this.state.lastMaintenance}
+          onSubmit={this.handleEquipamientoSubmit} names={this.state.name} descriptions={this.state.description} lastMaintenances={this.state.lastMaintenance} ubications={this.state.ubication}
         ></Equipamientoupdate>
       </Container>
     );
