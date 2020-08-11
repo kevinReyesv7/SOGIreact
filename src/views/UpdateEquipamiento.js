@@ -5,7 +5,7 @@ import {
 } from "shards-react";
 
 import PageTitle from "../components/common/PageTitle";
-import Equipamiento from "../components/forms/Equipamiento";
+import Equipamiento from "../components/forms/ActualizarEquipamiento";
 import equipamientosService from '../services/equipamientos.service';
 
 class UpdateEquipamiento extends Component {
@@ -40,7 +40,7 @@ class UpdateEquipamiento extends Component {
       <Container fluid className="main-content-container px-4 pb-4">
         {/* Page Header */}
         <Row noGutters className="page-header py-4">
-          <PageTitle sm="4" title="Editar Equipamiento" subtitle="AlphaOmega" className="text-sm-left" />
+          <PageTitle sm="4" title="Actualizar Equipamiento" subtitle="AlphaOmega" className="text-sm-left" />
         </Row>
         <Equipamiento
           onSubmit={this.handleEquipamientoSubmit} names={this.state.name} descriptions={this.state.description} lastMaintenances={this.state.lastMaintenance}
