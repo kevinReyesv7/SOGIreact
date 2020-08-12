@@ -7,7 +7,7 @@ export default function() {
     },
     {
       title: "Quimioterapia",
-      to: "/quimioterapia",
+      to: "https://opelcorsa-app.herokuapp.com/quimioterapia",
       htmlBefore: '<i class="material-icons">edit</i>'
     },
     {
@@ -28,7 +28,7 @@ export default function() {
     {
       title: 'Personal y Equipos',
       htmlBefore: '<i class="material-icons">note_add</i>',
-      to: 'https://chopinhauer-web.herokuapp.com/all-pservice'
+      to: 'https://chopinhauer-web.herokuapp.com/pservice/all-pservice'
     }
   ];
 }
