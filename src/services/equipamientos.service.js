@@ -6,10 +6,10 @@ function getAll() {
     return api.get(`${basePath}`);
 }
 
-//const show = async (equipamientoId) => {
-//    const resp = await api.get(`${basePath}/${equipamientoId}`);
-//    return resp;
-//}
+const show = async (equipamientoId) => {
+    const resp = await api.get(`${basePath}/${equipamientoId}`);
+    return resp;
+}
 
 function create(data) {
     return api.post(`${basePath}`, data);
@@ -30,7 +30,7 @@ function remove(equipamientoId) {
 
 const equipamientosService = {
     getAll,
-    //show,
+    show,
     create,
     update,
     remove,
