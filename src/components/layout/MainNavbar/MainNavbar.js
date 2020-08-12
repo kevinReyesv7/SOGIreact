@@ -3,9 +3,9 @@ import PropTypes from "prop-types";
 import classNames from "classnames";
 import { Container, Navbar } from "shards-react";
 
-import NavbarSearch from "./NavbarSearch";
-import NavbarNav from "./NavbarNav/NavbarNav";
+import NavbarNavItems from "./NavbarNav/NavbarNavItems";
 import NavbarToggle from "./NavbarToggle";
+
 
 const MainNavbar = ({ layout, stickyTop }) => {
   const classes = classNames(
@@ -18,8 +18,7 @@ const MainNavbar = ({ layout, stickyTop }) => {
     <div className={classes}>
       <Container className="p-0">
         <Navbar type="light" className="align-items-stretch flex-md-nowrap p-0">
-          <NavbarSearch />
-          <NavbarNav />
+          <NavbarNavItems />
           <NavbarToggle />
         </Navbar>
       </Container>
